@@ -23,17 +23,17 @@ Installing
 THIS IS NOT A MODULE, this is to be used as a template for your own enviroment to setup your own functions within for whatever
 you want to Multiprocess/Thread.
 
-python ssh_loop.py\n
-Connection to x.x.x.x was successful.\n
-Connection to x.x.x.x was successful.\n
-Connection to x.x.x.x was successful.\n
-Connection to x.x.x.x was successful.\n
-Connection to x.x.x.x timed out.\n
-Connection to x.x.x.x was successful.\n
-Authentication to x.x.x.x failed.\n
-Connection to x.x.x.x was successful.\n
-etc......\n
-Total time to ssh into all devices 0:08:54.193422.\n
+python ssh_loop.py  
+Connection to x.x.x.x was successful.  
+Connection to x.x.x.x was successful.  
+Connection to x.x.x.x was successful.  
+Connection to x.x.x.x was successful.  
+Connection to x.x.x.x timed out.  
+Connection to x.x.x.x was successful.  
+Authentication to x.x.x.x failed.  
+Connection to x.x.x.x was successful.  
+etc......  
+Total time to ssh into all devices 0:08:54.193422.  
 
 License
 
