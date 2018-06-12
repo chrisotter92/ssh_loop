@@ -14,9 +14,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 Prerequisites
 
-Python 2.7 (haven't tested in 3 yet)
-Paramiko
-Netmiko
+Python 2.7 (haven't tested in 3 yet)  
+Paramiko  
+Netmiko  
 
 Installing
 
