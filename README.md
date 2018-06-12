@@ -1,12 +1,7 @@
 # ssh_loop
 Attempt to loop through password for ssh
 
-This is an attempt of setting up threading within multiprocessing. I've been having issue in different enviroments where going 
-above 100 threads causes a "No existing sessions" with in Paramiko. My work around for this then was to setup Multiprocessing
-with threading so I could still connection to all the devices I need to in a timely manner. With the limited testing I've done
-when running the same script to ssh between 300 threads (dev enviroment doesn't limit my threads) and multiprocess with 32 
-processes with 50 threads each I've been able to go from ~11 minutes to attempt to ssh into ~4,700 devices to ~8 minutes. In the
-enviroments that I'm limited to 100 threads I've been able to go from ~18 minutes to ~8 minutes to do the same work.
+This is an attempt of setting up threading within multiprocessing. I've been having issue in different enviroments where going above 100 threads causes a "No existing sessions" with in Paramiko. My work around for this then was to setup Multiprocessing with threading so I could still connection to all the devices I need to in a timely manner. With the limited testing I've done when running the same script to ssh between 300 threads (dev enviroment doesn't limit my threads) and multiprocess with 32 processes with 50 threads each I've been able to go from ~11 minutes to attempt to ssh into ~4,700 devices to ~8 minutes. In the enviroments that I'm limited to 100 threads I've been able to go from ~18 minutes to ~8 minutes to do the same work.
 
 Getting Started
 
