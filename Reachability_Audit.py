@@ -7,9 +7,8 @@ from multiprocessing import Pool
 from threading import Thread
 
 
-def audit(device):
+def audit(device, deviceStatus):
     # Used to keep track of data in myThreads().
-    global deviceStatus
     hostname, ip, handler, devicetype = device.split('|')
     if 'not_supported' in handler:
         deviceStatus.append([hostname, 5])
@@ -37,13 +36,12 @@ def sqlUpdate(hostname, status):
 
 # Threading function that's called by the multiprocesses, builds threads based of len of list sent
 def myThreads(devices):
-    # Used to keep track of data in local variable in main()
-    global deviceStatus
+    # Used to keep track of the status of devices
     deviceStatus = []
     threads = len(devices)
     ranTreads = []
     for y in range(threads):
-        thread = Thread(target=audit, args=[devices[y]])
+        thread = Thread(target=audit, args=[devices[y], deviceStatus])
         thread.start()
         ranTreads.append(thread)
     # Ensures all threads are done before closing existing threads
@@ -55,9 +53,6 @@ def main():
     try:
         # Used to declare the number of threads wanted in each process
         spawnThreads = 50
-        # Keeps track of device status for SQL inside the multiprocessing but for some reason is not able to be directly
-        #  written to
-        deviceStatus = []
         # SQL query to get all devices in inventory table
         sqlDict = SQL_Query.openQuery('test', 'inventory_table')
         # List of all devices
