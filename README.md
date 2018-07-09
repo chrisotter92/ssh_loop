@@ -36,5 +36,6 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 Acknowledgments
 
     Jeremy Mesloh for testing, vetting, and general knowledge!
+    Tyler Bigler for fixing my variable usage issue!
     Kirk Byers - Netmiko, also thank you for helping fix stale ssh sessions not closing that never established!
     Jeff Forcier and Robey Pointer - Paramiko, thanks for providing the foundation for everything!
